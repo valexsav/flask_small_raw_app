@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Редактировать задачу{% endblock %}</title>
+
+{% block content %}
+<h2>Редактировать задачу</h2>
+
+<!-- Отображение текущей информации о задаче -->
+<div>
+    <p><strong>Название:</strong> {{ task[1] }}</p>
+    <p><strong>Категория:</strong> {{ task[2] }}</p>
+    <p><strong>Описание:</strong> {{ task[3] }}</p>
+    <p><strong>Приоритет:</strong> {{ task[4] }}</p>
+    <p><strong>Статус:</strong> {{ task[5] }}</p>
+</div>
+
+<hr>
+
+<!-- Форма для редактирования задачи -->
+<form action="{{ url_for('edit_task', task_id=task[0]) }}" method="POST">
+    <input type="text" name="name" value="{{ task[1] }}" placeholder="Название" required><br><br>
+    <input type="text" name="category" value="{{ task[2] }}" placeholder="Категория" required><br><br>
+    <textarea name="description" placeholder="Описание" required>{{ task[3] }}</textarea><br><br>
+    <input type="number" name="priority" value="{{ task[4] }}" required><br><br>
+    <input type="text" name="status" value="{{ task[5] }}" placeholder="Статус" required><br><br>
+    <button type="submit">Сохранить изменения</button>
+</form>
+
+<a href="{{ url_for('index') }}">Вернуться к списку задач</a>
+
+{% endblock %}

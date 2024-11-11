@@ -1,0 +1,102 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #6ebfb5;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6ebfb5;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #5aa99a;
+}
+
+/* Стили для списка задач */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #6ebfb5;
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #666;
+    font-size: 0.9em;
+}

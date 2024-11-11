@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<head>
+  <title>
+        {% block title %} {{ task[0] }} {% endblock %}
+    </title>
+</head>
+
+{% block content %}
+    <h2>задача номер {{ task[0] }}</h2>
+    <p><strong>Название:</strong> {{ task[1] }}</p>
+    <p><strong>категория:</strong> {{ task[2] }}</p>
+    <p><strong>приоритет:</strong> {{ task[4] }}</p>
+    <p><strong>статус:</strong> {{ task[5] }}</p>
+
+    <h3>Комментарии: </h3>
+    <ul>
+        {% for comment in content %}
+        <li>{{ comment[2] }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Вернуться к списку задач</a>
+
+{% endblock %}
